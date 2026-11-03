@@ -1,0 +1,244 @@
+/* PORTFOLIO HERO */
+
+.portfolio-hero {
+    height: 50vh;
+    background-image: url("../images/kitchen.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 12, 70, 0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.portfolio-overlay h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.portfolio-overlay p {
+    font-size: 18px;
+}
+
+/* PORTFOLIO GRID */
+
+.portfolio-container {
+    padding: 80px 10%;
+    background-color: #f6f7fb;
+}
+
+.portfolio-container h3 {
+  position: relative;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.portfolio-container h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 80vw;
+  height: 2px;
+  background-color: #ddd;
+  transform: translateX(-50%);
+}
+
+/* Gallery layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* altijd 4 kolommen */
+  gap: 20px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Telefoon */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-info {
+    padding: 20px;
+}
+
+.portfolio-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #050c46;
+}
+
+.portfolio-info p {
+    font-size: 15px;
+    color: #333;
+}
+
+/* CTA SECTION */
+
+.portfolio-cta {
+    padding: 80px 20px;
+    background-color: #050c46;
+    text-align: center;
+    color: white;
+}
+
+.portfolio-cta h3 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.portfolio-cta .cta-btn {
+    text-decoration: none;
+    padding: 14px 32px;
+    background-color: white;
+    color: #050c46;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-cta .cta-btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+/* THE CSS OF EACH PROJECT PAGE*/
+/* Project hero */
+.project-hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.project-hero h2 {
+  margin-bottom: 10px;
+}
+
+/* Gallery layout */
+.project-gallery {
+  padding: 40px 8%;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* altijd 4 kolommen */
+  gap: 20px;
+  padding-top: 4em;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .portfolio-overlay h2 {
+        font-size: 36px;
+    }
+
+    .portfolio-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Telefoon */
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Modal achtergrond */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Afbeelding in modal */
+.modal img {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+/* Sluit knop */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}

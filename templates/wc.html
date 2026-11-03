@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>WC | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+
+    <header>
+        <h1>Klus en onderhoudsbedrijf Vader</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">Over mij</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="project-hero">
+        <h2>WC</h2>
+            <p></p>
+    </section>
+
+    <main class="project-gallery">
+
+        <div class="gallery-grid">
+            <img src="../images/wc/wc.jpg" alt="wc project foto 1">
+            <img src="../images/wc/wc2.jpg" alt="wc project foto 2">
+            <img src="../images/wc/wc3.jpg" alt="wc project foto 3">
+            <img src="../images/wc/wc4.jpg" alt="wc project foto 4">
+            <img src="../images/wc/wc5.jpg" alt="wc project foto 5">
+            <img src="../images/wc/wc6.jpg" alt="wc project foto 6">
+            <img src="../images/wc/wc8.jpg" alt="wc project foto 8">
+            <img src="../images/wc/wc9.jpg" alt="wc project foto 9">
+            <img src="../images/wc/wc10.jpg" alt="wc project foto 10">
+            <img src="../images/wc/wc11.jpg" alt="wc project foto 11">
+            <img src="../images/wc/wc12.jpg" alt="wc project foto 12">
+            <img src="../images/wc/wc13.jpg" alt="wc project foto 13">
+            <img src="../images/wc/wc14.jpg" alt="wc project foto 14">
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        © Gert Vader – Klus & Onderhoud
+    </footer>
+
+        <script>
+        var images = document.querySelectorAll('.gallery-grid img');
+        var modal = document.createElement('div');
+        var modalImg = document.createElement('img');
+        var closeBtn = document.createElement('span');
+
+        modal.classList.add('modal');
+        closeBtn.classList.add('close');
+        closeBtn.innerHTML = '&times;';
+        modal.appendChild(closeBtn);
+        modal.appendChild(modalImg);
+        document.body.appendChild(modal);
+
+        images.forEach(function (img) {
+            img.addEventListener('click', function () {
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

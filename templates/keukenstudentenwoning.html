@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Keukenverbouwing | Portfolio</title>
+  <link rel="stylesheet" href="../style/style.css">
+<link rel="stylesheet" href="../style/portfolio.style.css">
+  <link rel="stylesheet" href="../style/portfolio.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+
+  <header>
+    <h1>Klus en onderhoudsbedrijf Vader</h1>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">Over mij</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="project-hero">
+    <h2>Keukenverbouwing</h2>
+    <p>Moderne keuken met maatwerk en hoogwaardige afwerking.</p>
+  </section>
+
+  <main class="project-gallery">
+    
+    <div class="gallery-grid">
+      <img src="../images/keukenstudentenwoning/keukenstudentenwoning.jpg" alt="Keuken project foto 1">
+      <img src="../images/keukenstudentenwoning/keukenstudentenwoning2.jpg" alt="Keuken project foto 2">
+      <img src="../images/keukenstudentenwoning/keukenstudentenwoning3.jpg" alt="Keuken project foto 3">
+    </div>
+
+  </main>
+
+  <footer>
+    © Gert Vader – Klus & Onderhoud
+  </footer>
+
+      <script>
+        var images = document.querySelectorAll('.gallery-grid img');
+        var modal = document.createElement('div');
+        var modalImg = document.createElement('img');
+        var closeBtn = document.createElement('span');
+
+        modal.classList.add('modal');
+        closeBtn.classList.add('close');
+        closeBtn.innerHTML = '&times;';
+        modal.appendChild(closeBtn);
+        modal.appendChild(modalImg);
+        document.body.appendChild(modal);
+
+        images.forEach(function (img) {
+            img.addEventListener('click', function () {
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

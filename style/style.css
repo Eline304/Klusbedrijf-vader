@@ -1,0 +1,213 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    min-height: 100vh;
+    background-color: #f6f7fb;
+}
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100vw;
+    color:  rgb(255, 255, 255);
+    padding: 0% 20%;
+    box-shadow: 8px 16px 32px black;
+    background-color: rgb(5, 12, 70);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+}
+
+li a {
+    text-decoration: none;
+    color:  rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+
+.hero {
+    height: 85vh;
+    background-image: url("../images/totaalbouw/totaalbouw8.jpg"); /* grote foto */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 12, 70, 0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay h2 {
+    margin-top: 0px;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-overlay p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-btn {
+    text-decoration: none;
+    padding: 14px 28px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: white;
+    color: #050c46;
+}
+
+.hero-btn.primary {
+    background-color: white;
+    color: #050c46;
+}
+
+.hero-btn.primary:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* INTRO */
+
+.intro {
+    padding: 80px 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.intro h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #050c46;
+}
+
+.intro p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* SERVICES */
+
+.services {
+    display: flex;
+    gap: 40px;
+    padding: 80px 15%;
+    background-color: white;
+}
+
+
+.service {
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    flex: 1;
+    overflow: hidden;
+}
+
+.service h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #050c46;
+    margin-top: 20px;
+}
+
+
+.service img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.service h4,
+.service p {
+    padding: 0 20px;
+}
+
+
+/* CTA */
+
+.cta {
+    padding: 80px 20px;
+    background-color: #050c46;
+    color: white;
+    text-align: center;
+}
+
+.cta h3 {
+    font-size: 30px;
+    margin-bottom: 2em;
+}
+
+.cta-btn {
+    text-decoration: none;
+    padding: 14px 32px;
+    background-color: white;
+    color: #050c46;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 0.25em;
+    text-align: center;
+    background-color: #f6f7fb;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .services {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 36px;
+    }
+
+    .service img {
+    height: 150px;
+    }
+}

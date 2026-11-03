@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Overkapping | Portfolio</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/portfolio.style.css">
+    <link rel="stylesheet" href="../style/portfolio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+
+    <header>
+        <h1>Klus en onderhoudsbedrijf Vader</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">Over mij</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="project-hero">
+        <h2>Overkapping</h2>
+            <p></p>
+    </section>
+
+    <main class="project-gallery">
+
+        <div class="gallery-grid">
+            <img src="../images/overkapping/overkapping.jpg" alt="Overkapping project foto 1">
+            <img src="../images/overkapping/overkapping2.jpg" alt="Overkapping project foto 2">
+            <img src="../images/overkapping/overkapping3.jpg" alt="Overkapping project foto 3">
+            <img src="../images/overkapping/overkapping4.jpg" alt="Overkapping project foto 4">
+            <img src="../images/overkapping/overkapping5.jpg" alt="Overkapping project foto 5">
+            <img src="../images/overkapping/overkapping6.jpg" alt="Overkapping project foto 6">
+            <img src="../images/overkapping/overkapping7.jpg" alt="Overkapping project foto 7">
+            <img src="../images/overkapping/overkapping8.jpg" alt="Overkapping project foto 8">
+            <img src="../images/overkapping/overkapping9.jpg" alt="Overkapping project foto 9">
+            <img src="../images/overkapping/overkapping10.jpg" alt="Overkapping project foto 10">
+        </div>
+
+    </main>
+
+    <footer>
+        © Gert Vader – Klus & Onderhoud
+    </footer>
+
+        <script>
+        var images = document.querySelectorAll('.gallery-grid img');
+        var modal = document.createElement('div');
+        var modalImg = document.createElement('img');
+        var closeBtn = document.createElement('span');
+
+        modal.classList.add('modal');
+        closeBtn.classList.add('close');
+        closeBtn.innerHTML = '&times;';
+        modal.appendChild(closeBtn);
+        modal.appendChild(modalImg);
+        document.body.appendChild(modal);
+
+        images.forEach(function (img) {
+            img.addEventListener('click', function () {
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

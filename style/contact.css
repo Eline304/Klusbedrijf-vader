@@ -1,0 +1,111 @@
+/* CONTACT PAGINA */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+    background-color: #f6f7fb;
+}
+
+.contact-card {
+    display: flex;
+    gap: 60px;
+    background-color: white;
+    padding: 60px;
+    border-radius: 16px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* INFO */
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 34px;
+    color: #050c46;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.maillink {
+    color: black;
+    font-size: 15px;
+}
+
+/* FORMULIER */
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #050c46;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #050c46;
+}
+
+/* BUTTON */
+
+.contact-form button {
+    padding: 14px;
+    background-color: #050c46;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #03092e;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .contact-card {
+        flex-direction: column;
+        padding: 40px;
+    }
+}

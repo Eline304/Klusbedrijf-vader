@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kasten | Portfolio</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/portfolio.style.css">
+    <link rel="stylesheet" href="../style/portfolio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+
+    <header>
+        <h1>Klus en onderhoudsbedrijf Vader</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">Over mij</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="project-hero">
+        <h2>Kasten</h2>
+        <p></p>
+    </section>
+
+    <main class="project-gallery">
+
+        <div class="gallery-grid">
+            <img src="../images/kasten/kasten.jpg" alt="Kasten project foto 1">
+            <img src="../images/kasten/kasten2.jpg" alt="Kasten project foto 2">
+            <img src="../images/kasten/kasten3.jpg" alt="Kasten project foto 3">
+            <img src="../images/kasten/kasten4.jpg" alt="Kasten project foto 4">
+            <img src="../images/kasten/kasten5.jpg" alt="Kasten project foto 5">
+            <img src="../images/kasten/kasten7.jpg" alt="Kasten project foto 7">
+            <img src="../images/kasten/kasten8.jpg" alt="Kasten project foto 8">
+            <img src="../images/kasten/kasten9.jpg" alt="Kasten project foto 9">
+            <img src="../images/kasten/kasten10.jpg" alt="Kasten project foto 10">
+            <img src="../images/kasten/kasten11.jpg" alt="Kasten project foto 11">
+            <img src="../images/kasten/kasten12.jpg" alt="Kasten project foto 12">
+            <img src="../images/kasten/kasten13.jpg" alt="Kasten project foto 13">
+            <img src="../images/kasten/kasten14.jpg" alt="Kasten project foto 14">
+            <img src="../images/kasten/kasten15.jpg" alt="Kasten project foto 15">
+            <img src="../images/kasten/kasten16.jpg" alt="Kasten project foto 16">
+            <img src="../images/kasten/kasten17.jpg" alt="Kasten project foto 17">
+            <img src="../images/kasten/kasten18.jpg" alt="Kasten project foto 18">
+            <img src="../images/kasten/kasten19.jpg" alt="Kasten project foto 19">
+        </div>
+
+    </main>
+
+    <footer>
+        © Gert Vader – Klus & Onderhoud
+    </footer>
+
+    <script>
+        var images = document.querySelectorAll('.gallery-grid img');
+        var modal = document.createElement('div');
+        var modalImg = document.createElement('img');
+        var closeBtn = document.createElement('span');
+
+        modal.classList.add('modal');
+        closeBtn.classList.add('close');
+        closeBtn.innerHTML = '&times;';
+        modal.appendChild(closeBtn);
+        modal.appendChild(modalImg);
+        document.body.appendChild(modal);
+
+        images.forEach(function (img) {
+            img.addEventListener('click', function () {
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
